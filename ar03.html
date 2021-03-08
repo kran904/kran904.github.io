@@ -12,7 +12,7 @@
     </script>
 <script>
       window.onload = () => {                       navigator.geolocation.getCurrentPosition((position) => {
-        document.querySelector('a-entity').setAttribute('gps-projected-entity-place', `latitude: ${position.coords.latitude - 0.1}; longitude: ${position.coords.longitude};`)
+        document.querySelector('a-entity').setAttribute('gps-projected-entity-place', `latitude: ${position.coords.latitude} - 0.1; longitude: ${position.coords.longitude};`)
       });
      }
     </script>

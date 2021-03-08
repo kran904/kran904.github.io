@@ -12,7 +12,7 @@
     </script>
 <script>
       window.onload = () => {                       navigator.geolocation.getCurrentPosition((position) => {
-        document.querySelector('a-entity').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude - 0.01}; longitude: ${position.coords.longitude};`)
+        document.querySelector('a-entity').setAttribute('gps-projected-entity-place', `latitude: ${position.coords.latitude - 0.1}; longitude: ${position.coords.longitude};`)
       });
      }
     </script>
@@ -27,6 +27,6 @@
 
 <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
 
-        <a-camera gps-camera rotation-reader></a-camera>
+        <a-camera gps-projected-camera rotation-reader></a-camera>
     </a-scene>
 </body>
